@@ -9,6 +9,7 @@ import AISection from "./sections/AISection/AISection";
 import Work from "./sections/Work/Work";
 import Marketing from "./sections/Marketing/Marketing";
 import Footer from "./sections/Footer/Footer";
+import About from "./sections/About Page/About";
 
 /*
   Karinna Rocha — Portfolio
@@ -43,7 +44,9 @@ export default function Home() {
             <AISection />
             <Work />
             <Marketing />
+            <About />
             <Footer />
+
         </div>
     );
 }

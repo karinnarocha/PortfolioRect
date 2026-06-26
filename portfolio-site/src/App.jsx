@@ -4,6 +4,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import CursorGlow from "./components/CursorGlow";
 import Home from "./Home";
 import CaseStudy from "./sections/CaseStudy/CaseStudy";
+import About from "./sections/About Page/About";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
               <GlobalStyles />
               <CursorGlow />
               <CaseStudy />
+              <About />
             </div>
           }
         />

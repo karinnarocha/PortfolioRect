@@ -33,7 +33,6 @@
   background-size: auto 92%;
   background-position: center bottom;
   /* portrait centered on the whole page */
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
 }
 
 /* Left half: image's left edge starts at this half's left → so the centered
