@@ -1,0 +1,31 @@
+.strip {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.num {
+  font-family: var(--display);
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  color: var(--lime);
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--mist);
+  margin-top: 8px;
+}
+
+@media (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

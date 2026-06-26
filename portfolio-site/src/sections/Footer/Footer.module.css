@@ -1,0 +1,33 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--line);
+  padding: 80px 0 50px;
+}
+
+.cta {
+  font-family: var(--display);
+  font-size: clamp(40px, 8vw, 96px);
+  line-height: 0.95;
+  margin-bottom: 40px;
+}
+
+.cta a {
+  color: var(--lime);
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--mist);
+}
+
+.socials {
+  display: flex;
+  gap: 22px;
+}

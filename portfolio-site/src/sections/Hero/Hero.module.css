@@ -1,0 +1,200 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.side {
+  position: relative;
+  flex: 1 1 50%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: flex-basis 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  text-decoration: none;
+}
+
+.hero .side:hover {
+  flex-basis: 62%;
+  z-index: 3;
+}
+
+.imgLayer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 98.9vw;
+  /* spans the full page width, so it scales with it */
+  background-repeat: no-repeat;
+  background-size: auto 92%;
+  background-position: center bottom;
+  /* portrait centered on the whole page */
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
+}
+
+/* Left half: image's left edge starts at this half's left → so the centered
+   portrait's right half shows here. Right half: pull image left by one
+   viewport-half so its left half shows. Both use vw, so always centered. */
+.left .imgLayer {
+  left: 0;
+}
+
+.right .imgLayer {
+  right: 0;
+}
+
+.side:hover {
+  overflow: visible;
+  z-index: 5;
+}
+
+.side:hover .imgLayer {
+  transform: scale(1.06);
+}
+
+/* On hover, reveal the full image of the hovered side, kept centered. */
+.side:hover {
+  overflow: visible;
+  z-index: 5;
+}
+
+.side:hover .imgLayer {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(10, 10, 15, 0.85) 0%,
+      rgba(10, 10, 15, 0.35) 45%,
+      rgba(10, 10, 15, 0.55) 100%);
+  transition: opacity 0.5s ease;
+}
+
+.side:hover .overlay {
+  opacity: 0;
+}
+
+.seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12%;
+  padding: 0 7%;
+  z-index: 2;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.side:hover .content {
+  transform: translateY(-8px);
+}
+
+.label {
+  font-family: var(--display);
+  font-size: clamp(40px, 6vw, 92px);
+  line-height: 0.95;
+  color: var(--paper);
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.label em {
+  font-style: normal;
+  color: var(--lime);
+}
+
+.desc {
+  font-family: var(--sans);
+  font-size: clamp(14px, 1.3vw, 17px);
+  line-height: 1.5;
+  color: var(--mist);
+  max-width: 340px;
+}
+
+.cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mist);
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.side:hover .cue {
+  color: var(--lime);
+  gap: 14px;
+}
+
+.right .content {
+  text-align: right;
+}
+
+.right .desc {
+  margin-left: auto;
+}
+
+.eyebrow {
+  position: absolute;
+  top: 8%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--lime);
+  pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .side,
+  .hero:hover .side,
+  .hero .side:hover {
+    flex-basis: auto;
+    height: 70vh;
+  }
+
+  .seam {
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: auto;
+    width: 100%;
+    height: 1px;
+  }
+
+  .right .content {
+    text-align: left;
+  }
+
+  .right .desc {
+    margin-left: 0;
+  }
+}

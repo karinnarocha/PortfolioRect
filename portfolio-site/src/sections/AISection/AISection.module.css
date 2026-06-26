@@ -1,0 +1,86 @@
+.panel {
+  background: linear-gradient(135deg,
+      rgba(107, 78, 255, 0.18),
+      rgba(255, 93, 59, 0.1));
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: clamp(32px, 5vw, 60px);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.heading {
+  font-family: var(--display);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.02;
+  margin-bottom: 18px;
+}
+
+.copy {
+  color: var(--mist);
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.terminal {
+  background: #070709;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  font-family: var(--mono);
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.termBar {
+  display: flex;
+  gap: 7px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.termBody {
+  margin: 0;
+  padding: 18px 16px;
+  color: #7fffaf;
+  line-height: 1.7;
+  font-family: var(--mono);
+  font-size: 13px;
+  white-space: pre;
+  overflow: auto;
+  max-height: 360px;
+}
+
+.termBody {
+  padding: 18px 16px;
+  color: #7fffaf;
+  line-height: 1.9;
+}
+
+.muted {
+  color: var(--mist);
+}
+
+.kw {
+  color: var(--violet);
+}
+
+.str {
+  color: #e8a33d;
+}
+
+@media (max-width: 820px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
