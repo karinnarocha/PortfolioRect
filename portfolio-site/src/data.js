@@ -104,7 +104,7 @@ export const CASE_STUDIES = {
     year: "2024",
     type: "E-commerce",
     stack: "Shopify",
-    mainImage: "/public/Lulunremimainpage.png",
+    mainImage: "/public/lulunremimainpage.png",
     shots: [
       "/public/lulunremileftside.png",
       "/public/lulunremirightside.png",
@@ -125,7 +125,7 @@ export const CASE_STUDIES = {
     mainImage: "/public/Albertmainpage.png",
     shots: [
       "/public/albertcoachingsidescreen.png",
-      "/public/Albertprogrampage.png",
+      "/public/albertprogrampage.png",
     ],
     overview: "Write what the project was, what you did, and the result.",
     tools: ["Web", "React.js", "CSS", "Vercel", "Git"],
