@@ -13,7 +13,7 @@ export default function Marketing() {
           </h3>
           <p className={styles.copy}>
             Good UI isn't enough if no one finds it. I build with SEO in mind from
-            the start — semantic HTML, performance, Core Web Vitals, and accessibility —
+            the start, semantic HTML, performance, Core Web Vitals, and accessibility,
             so the sites I ship load fast, rank well, and convert.
           </p>
           <ul className={styles.list}>

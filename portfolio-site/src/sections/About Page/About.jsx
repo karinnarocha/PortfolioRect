@@ -14,7 +14,7 @@ export default function About() {
                     <h2>About</h2>
 
                     <p className={styles.intro}>
-                        Hi! My name is Karinna — where design meets creativity and technology.
+                        Hi! My name is Karinna, where design meets creativity and technology.
                     </p>
 
                     <p>

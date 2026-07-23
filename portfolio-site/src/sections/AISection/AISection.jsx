@@ -17,7 +17,7 @@ export default function AISection() {
             My stream has a mix of English and Portuguese-speaking viewers, so I
             built a live speech-to-text tool that transcribes what I say,
             auto-detects the language, and instantly translates EN ↔ PT to an
-            on-screen overlay — so everyone follows along in real time, no matter
+            on-screen overlay, so everyone follows along in real time, no matter
             which language they speak.
           </p>
           <div className={styles.chips}>
