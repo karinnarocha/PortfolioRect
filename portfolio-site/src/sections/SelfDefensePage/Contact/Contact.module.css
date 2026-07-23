@@ -1,0 +1,55 @@
+.contact {
+  background: var(--bg-soft);
+}
+
+.box {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtext {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 10px 0 32px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 15px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.ctaPrimary {
+  background: var(--pink);
+  color: #fff;
+  box-shadow: 0 6px 0 var(--pink-deep);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-2px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+}
+
+.ctaSecondary:hover {
+  background: var(--ink);
+  color: #fff;
+}

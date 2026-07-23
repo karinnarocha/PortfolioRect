@@ -5,6 +5,7 @@ import CursorGlow from "./components/CursorGlow";
 import Home from "./Home";
 import CaseStudy from "./sections/CaseStudy/CaseStudy";
 import About from "./sections/About Page/About";
+import SelfDefensePage from "./sections/SelfDefensePage/SelfDefensePage";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
             </div>
           }
         />
+        <Route path="/self-defense" element={<SelfDefensePage />} />
       </Routes>
     </BrowserRouter>
   );
